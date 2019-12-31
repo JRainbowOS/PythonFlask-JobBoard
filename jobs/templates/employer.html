@@ -1,18 +1,19 @@
 {% extends "layout.html" %}
+
 {% block content %}
 
-<div>
-    <h1>{{ employer['name'] }}</h1>
-    <div class="description">
-        <p> {{ employer['description'] }}</p>
-    </div>    
-</div>
+    <div>
+        <h1>{{ employer['name'] }}</h1>
+        <div class="description">
+            <p>{{ employer['description'] }}</p>
+        </div>    
+    </div>
 
   <h2>Jobs</h2>
     {{ show_jobs(jobs) }}
 
   <h2>Reviews</h2>
-    {{% for review in reviews %}}
+    {% for review in reviews %}
     <div class="box">
       <article class="media">
         <div class="media-left">
