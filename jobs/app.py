@@ -62,5 +62,5 @@ def review(employer_id, methods=('GET', 'POST')):
         commit=True)
         
         return redirect(url_for('employer', employer_id=employer_id))
-    render_template('review.html', employer_id=employer_id)
-    pass
+    
+    return render_template('review.html', employer_id=employer_id)
